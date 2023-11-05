@@ -102,12 +102,26 @@
       let clickCount = 0;
    
       // Обработчик нажатия кнопки "Click to Count"
-      let clickButton = document.getElementById("clickButton");
-      clickButton.addEventListener('click', function(){
-         clickCount++; // Увеличиваем счетчик кликов
-         // Обновляем текст параграфа для отображения количества кликов
-         clickButton.innerText = `${clickCount} WAV`;
-      });
+
+       const buttons = document.getElementsByClassName('btn');
+       for (let i = 0; i < buttons.length; i++) {
+           buttons[i].addEventListener('click', function (e) {
+               clickCount++;
+               clickButton.innerText = `${clickCount} WAV`;
+               const wave = document.createElement('span'),
+                   waveOffset = this.getBoundingClientRect();
+               const waveY = e.pageY - waveOffset.top,
+                   waveX = e.pageX - waveOffset.left;
+               wave.style.top = waveY + 'px',
+                   wave.style.left = waveX + 'px',
+                   wave.style.background = this.getAttribute('data-button-background');
+               this.appendChild(wave);
+   
+               setTimeout(function () {
+                   wave.parentNode.removeChild(wave);
+               }, 1500);
+           });
+       }
    
       // Обработчик нажатия кнопки "Send Data to Bot"
       let sendDataButton = document.getElementById("sendDataButton");
