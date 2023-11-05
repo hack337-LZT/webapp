@@ -43,41 +43,51 @@
       }
 
       .btn {
-         position: relative;
-         overflow: hidden;
-         z-index: 1;
-         text-align: center; /* Добавлено для выравнивания текста по центру */
-         padding: 20px 30px; /* Добавлено для задания отступов кнопки */
-         border: none;
-         color: #fff;
-         background-color: #2a8d68;
-         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-      }
-      
-      .btn:hover {
-         background-color: #339e71;
-         box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
       }
       
       .btn span {
-         position: absolute;
-         height: 12px;
-         width: 12px;
-         border-radius: 100%;
-         background: #FFFFFF;
-         animation: buttonWave 2s;
+        position: absolute;
+        height: 12px;
+        width: 12px;
+        border-radius: 100%;
+        background: #FFFFFF;
+        -webkit-animation: buttonWave 2s;
+                animation: buttonWave 2s;
       }
       
       @keyframes buttonWave {
-         0% {
-            opacity: 0.2;
-            transform: scale(1);
-         }
-         100% {
-            opacity: 0;
-            transform: scale(30);
-         }
+        0% {
+          opacity: 0.2;
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+        }
+        100% {
+          opacity: 0;
+          -webkit-transform: scale(30);
+                  transform: scale(30);
+        }
       }
+      
+      /* Опционально */
+      .btn-default {
+        outline: none;
+        letter-spacing: 0.5px;
+        border: none;
+        padding: 20px 30px;
+        color: #fff;
+        background-color: #2a8d68;
+        text-align: center;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+      }
+      
+      .btn-default:hover {
+        background-color: #339e71;
+        box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+      }
+
 
 
       #usercard{
