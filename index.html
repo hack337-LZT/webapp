@@ -42,28 +42,43 @@
          align-items: center;
       }
 
-      #clickButton {
-         background: var(--tg-theme-button-color);
-         color: var(--tg-theme-button-text-color);
+      .btn {
+         position: relative;
+         overflow: hidden;
+         z-index: 1;
+         text-align: center; /* Добавлено для выравнивания текста по центру */
+         padding: 20px 30px; /* Добавлено для задания отступов кнопки */
          border: none;
-         font-size: 24px; /* Увеличьте размер шрифта для большей кнопки */
-         border-radius: 50%; /* Для создания круглой формы */
-         width: 200px; /* Задайте ширину и высоту по вашему усмотрению */
-         height: 200px;
-         position: absolute; /* Абсолютная позиция */
-         top: 50%; /* Вертикальное выравнивание по центру */
-         left: 50%; /* Горизонтальное выравнивание по центру */
-         transform: translate(-50%, -50%); /* Центрирование как по вертикали, так и по горизонтали */
-         display: flex;
-         justify-content: center;
-         align-items: center;
+         color: #fff;
+         background-color: #2a8d68;
+         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+      }
+      
+      .btn:hover {
+         background-color: #339e71;
+         box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+      }
+      
+      .btn span {
+         position: absolute;
+         height: 12px;
+         width: 12px;
+         border-radius: 100%;
+         background: #FFFFFF;
+         animation: buttonWave 2s;
+      }
+      
+      @keyframes buttonWave {
+         0% {
+            opacity: 0.2;
+            transform: scale(1);
+         }
+         100% {
+            opacity: 0;
+            transform: scale(30);
+         }
       }
 
-
-
-      .button:not(:last-child){
-         margin-bottom: 20px
-      }
 
       #usercard{
          text-align: center;
@@ -75,7 +90,7 @@
    <div id="usercard"> <!--Карта профиля, человека, который к нам обратился-->
    </div>
       <!-- Кнопка для кликов -->
-      <button id="clickButton" class="button">КЛИКАТЬ WAV</button>
+      <button id="clickButton" class="btn btn-default" data-button-background="#FFFFFF">КЛИКАТЬ WAV</button>
 
       <!-- Кнопка для отправки данных в бота -->
       <button id="sendDataButton" class="button">ОТПРАВИТЬ ВАВЫ</button>
