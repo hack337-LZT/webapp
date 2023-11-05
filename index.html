@@ -45,6 +45,7 @@
 <body>
    <div id="usercard"> <!--Карта профиля, человека, который к нам обратился-->
    </div>
+      <p id="clickCountText">Количество кликов: 0</p>
       <!-- Кнопка для кликов -->
       <button id="clickButton" class="button">Click to Count</button>
 
@@ -61,13 +62,15 @@
       let clickButton = document.getElementById("clickButton");
       clickButton.addEventListener('click', function(){
          clickCount++; // Увеличиваем счетчик кликов
+         // Обновляем текст параграфа для отображения количества кликов
+         document.getElementById("clickCountText").innerText = `Количество кликов: ${clickCount}`;
       });
    
       // Обработчик нажатия кнопки "Send Data to Bot"
       let sendDataButton = document.getElementById("sendDataButton");
       sendDataButton.addEventListener('click', function(){
          // Отправляем данные о количестве кликов в бота
-         tg.sendData(`Количество кликов: ${clickCount}`);
+         tg.sendData(`${clickCount}`);
       });
    
    let usercard = document.getElementById("usercard"); //получаем блок usercard 
