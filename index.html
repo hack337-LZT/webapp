@@ -63,7 +63,7 @@
       clickButton.addEventListener('click', function(){
          clickCount++; // Увеличиваем счетчик кликов
          // Обновляем текст параграфа для отображения количества кликов
-         document.getElementById("clickCountText").innerText = `Количество кликов: ${clickCount}`;
+         clickButton.innerText = `Click: ${clickCount}`;
       });
    
       // Обработчик нажатия кнопки "Send Data to Bot"
