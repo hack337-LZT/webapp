@@ -45,12 +45,11 @@
 <body>
    <div id="usercard"> <!--Карта профиля, человека, который к нам обратился-->
    </div>
-      <p id="clickCountText">Количество кликов: 0</p>
       <!-- Кнопка для кликов -->
-      <button id="clickButton" class="button">Click to Count</button>
+      <button id="clickButton" class="button">КЛИКАТЬ WAV</button>
 
       <!-- Кнопка для отправки данных в бота -->
-      <button id="sendDataButton" class="button">Send Data to Bot</button>
+      <button id="sendDataButton" class="button">ОТПРАВИТЬ ВАВЫ</button>
    </body>
    
    <script>
@@ -63,7 +62,7 @@
       clickButton.addEventListener('click', function(){
          clickCount++; // Увеличиваем счетчик кликов
          // Обновляем текст параграфа для отображения количества кликов
-         clickButton.innerText = `Click: ${clickCount}`;
+         clickButton.innerText = `${clickCount} WAV`;
       });
    
       // Обработчик нажатия кнопки "Send Data to Bot"
