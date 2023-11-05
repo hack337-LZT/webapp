@@ -80,8 +80,16 @@
         color: #fff;
         background-color: #2a8d68;
         text-align: center;
+        border-radius: 50%; /* Задаем закругленные углы для круглой кнопки */
+        width: 150px; /* Задайте ширину по вашему усмотрению */
+        height: 150px; /* Задайте высоту по вашему усмотрению */
+        position: fixed; /* Фиксированная позиция */
+        top: 50%; /* Размещаем по вертикали по центру */
+        left: 50%; /* Размещаем по горизонтали по центру */
+        transform: translate(-50%, -50%); /* Центрируем по обоим осям */
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
       }
+
       
       .btn-default:hover {
         background-color: #339e71;
