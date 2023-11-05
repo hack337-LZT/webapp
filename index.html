@@ -25,18 +25,33 @@
          color: var(--tg-theme-link-color);
       }
 
-      .button {
+      #sendDataButton {
          background: var(--tg-theme-button-color);
          color: var(--tg-theme-button-text-color);
          border: none;
          font-size: 18px;
-         border-radius: 50%; /* Добавляем скругление углов для создания круглой кнопки */
-         width: 100px; /* Задайте ширину и высоту по вашему усмотрению */
-         height: 100px;
+         border-radius: 50%; /* Для создания овальной формы */
+         width: 150px; /* Задайте ширину и высоту по вашему усмотрению */
+         height: 60px;
+         margin-top: 20px; /* Для снижения кнопки */
          display: flex;
          justify-content: center;
          align-items: center;
       }
+      #clickButton {
+         background: var(--tg-theme-button-color);
+         color: var(--tg-theme-button-text-color);
+         border: none;
+         font-size: 24px; /* Увеличьте размер шрифта для большей кнопки */
+         border-radius: 50%; /* Для создания круглой формы */
+         width: 200px; /* Задайте ширину и высоту по вашему усмотрению */
+         height: 200px;
+         margin: auto; /* Чтобы разместить по центру экрана */
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
 
 
       .button:not(:last-child){
